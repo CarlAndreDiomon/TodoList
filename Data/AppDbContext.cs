@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Todo_List_App.Models;
 
 namespace Todo_List_App.Data
 {
-    public class AppDbContext : IdentityDbContext<IdentityUser>
+    public class AppDbContext : IdentityDbContext<Users>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions options) : base(options)
         {
         }
 
-        // Add DbSets for your custom models here
-        // public DbSet<TodoItem> TodoItems { get; set; }
     }
 }
